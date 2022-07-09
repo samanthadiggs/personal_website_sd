@@ -1,0 +1,72 @@
+body {
+    font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 40px;
+}
+/*
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+*/
+button {
+ /*   transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    */
+    max-width:10%;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+  /*  display: flex;
+    align-items: center;
+    */
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+.icon {
+    width:15%;
+}
+
+.navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    
+}
+
+.navigationBar a {
+    max-width:5%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.titleName {
+    flex-grow: 2;
+    white-space: nowrap;
+    
+}
