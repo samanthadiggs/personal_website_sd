@@ -1,73 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>samantha diggs</title>
-        <meta type="charset" value="UTF-8">
-        <meta lang="en">
-        <meta type="keywords" value="portfolio, CS, women in tech, women in stem, women of color, computer science, technology, ENSATS, high school">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="C:\Users\teawo\OneDrive\Desktop\coding!\Simple Portfolio Page\style.css">
-        <script src="index_animation.js"></script>
-    </head>
+  <head>
+    <title>Samantha Diggs </title>
+    <meta charset="utf-8"/>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
-    <div class="name">Samantha Diggs</div> 
-    <div class="additionalText"> 
-        <span>information technology student '25</span>
-      </div>
-    <section class="skillCategories">
-        <aside id="codeCategory">
-            <div class="content">
-              <img id="codeImage" class="categoryImage" src="assets\arnold-francisca-nPhl2x4fk2s-unsplash.jpg" alt="Macbook with VS code open">
-              <a href="code_page.html"><h2 class="categoryText">code</h2></a> 
-            </div>
-        </aside>
-        <aside id="designCategory">
-            <div class="content">
-                <img class="categoryImage" src="assets\alvaro-reyes-KxVlKiqQObU-unsplash.jpg">
-                <a href="#"><h2 class="categoryText">design</h2> </a>
-           </div>
-       </aside>
-    <aside id="itCategory">
-        <div class="content">
-            <img class="categoryImage" src="assets\dries-augustyns-WzKPT0IuUrU-unsplash.jpg">
-            <a href="#"><h2 class="categoryText">IT</h2></a>
-        </div>
-    </aside>
-    </section>
-    <section class="aboutMe">
-        <img class="aboutmeImage" src="assets\1H9A0647 (1).jpg"> 
-        <div class="aboutmeContent">
-          <h1 id="aboutmeTitle"> About me</h1>
-          <p id="aboutmeParagraph"> I am a 10th grade student attending a agricultural and technical school in Massachusetts. In school, I study information technology.
-             However my goal is to go to college for <em>Computer Science and Mathematics</em> with a minor in <em>Design and Media Communications</em>. 
-             I wish to take my knowlege afterwords to work at a FAANG company and do volunteer construction work with my IT background. 
-             I am passionate about learning and setting goals.  </p>
-        </div>
-    </section>
-    <section class="contactInformation">
-        <h2 id="contactTitle">where to find me?</h2>
-       <div class="contentContent">
-          <div class="contentItems">
-            <img src="assets\instagram.png">
-            <h3 class="iconName">instagram</h3>
-          </div>
-          <div class="contentItems">
-            <img src="assets\shop.png">
-          <h3 class="iconName">my shop</h3>
-         </div>
-         <div class="contentItems">
-         <img src="assets\linkedin.png">
-        <h3 class="iconName">linkedin</h3>
-        </div>
+	  <!-- link the webpage's stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	  <link rel="stylesheet" href="style.css" />
+    <!-- link to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap" rel="stylesheet">
+	  <!-- link the webpage's JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="tile_load.js"></script>
+  </head>
+  
+  <body class="no-cursor">
+    <!--
+    <div id="page_load_view" function="pagetitle()">
+      <div id="name">Samantha Diggs</div>
+      <div id="title">future data scientists & software engineer</div>
     </div>
-    </section>
+    -->
+    <nav id="navBar">
+      <h1 class="navLink" id="navHeader">Samantha Diggs</h1>
+      <a href= "about.html" class="hoverable navLink">About</a>
+      <a href= "portfolio.html" class="hoverable navLink">Projects</a>
+      
+      <div class="dropdown show">
+        <a class="hoverable btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-"> CTE</a>
+        
+        <div class="hoverable dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a href="credentials.html" class='hoverable dropdown-item navLink'>Credentials</a>
+          <a href="cte.html" class="hoverable dropdown-item navLink">ITS</a>
+          <a href="grad_profile.html" class="hoverable dropdown-item navLink">Graduate Profile</a>
+          <a href="service.html" class="hoverable dropdown-item navLink">Service and Recognition</a>
+      </div>
+    </div>
+    </nav>
+    <div id="hero">
+      <div class="introLeft">
+        <h1 class="pageHeading reveal2">Samantha Diggs</h1>
+        <p>Innovative thinker, <b> forever</b> learner, aspiring software engineer</p>
+        <div id="introRight" class="d-flex">
+            <div class="flex-shrink-0"> 
+                <img class="" src="assets/headshot_soph_light.png" alt="samantha diggs headshot with an arch mask, wearing shop uniform">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <p>Hello! My name is Samantha Diggs and I am a member of the <b>Class of 2025</b> in the Information Technology Services program at Essex North Shore Agricultural and Technical School. In the future, I will be attending Harvard University where I plan on majoring in Computer Science with a minor in Statistics.
+                During my time at Essex North Shore, I have taken advantage of numerous opportunities and harnessed my passion for technology. I am passionate about all things engineering, data, and design! Through our cooperative education program, I became employed at a Managed Services Provider where I provide technical support to a large number of clients and aid in managing our data center infrastructure. 
+                Whenever I am not coding, I am learning a new language, crocheting, or watching kdramas!
+                </p>
+                <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by kliwir art - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/css" title="css icons">Css icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by bearicons - Flaticon</a>
+            </div>
+        </div>
+        <h1 class="pageHeading" id="big_text">Future Engineer</h1>
+
+        <!-- 
+          <div id="buttonContainer">
+            <a href="https://www.linkedin.com"><img class="hoverable socialLink" src="assets/linkedin.png" alt="Linkedin icon in black and white"> </a>
+            <a href="https://github.com"><img class="hoverable socialLink"src="assets/github.png" alt="Github icon in black and white"> </a>
+          </div>
+          -->
+      </div>
+
+    </div>
+
+    <div class="loader ">
+        <div class="loader__icon">
+          <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+            <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+            <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z"></path>
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
+          </svg>
+        </div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+        <div class="loader__tile"></div>
+      </div>
+      
+      <div class="wrapper">
+        <button class="btn" type="button">Toggle page transition</button>
+      </div>
+      
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+    </div>
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
-<footer>
-    <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Freepik - Flaticon</a>
-    <a href="https://www.flaticon.com/free-icons/shop" title="shop icons">Shop icons created by Gregor Cresnar - Flaticon</a>
-    <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Enamo Studios - Flaticon</a>
-</footer>
 </html>
