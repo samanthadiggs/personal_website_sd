@@ -118,3 +118,17 @@ document.getElementById('projects-all').addEventListener('wheel', function(event
         this.scrollLeft += event.deltaY;
     }
 });
+
+
+function slideLeft() {
+    var load_div = document.querySelector('load');
+    load_div.classList.add('left_slide');
+
+    window.setTimeout(function () {
+        load_div.classList.remove('left_slide')
+      }, 8000);
+    }
+window.addEventListener('onload', slideLeft)
+slideLeft()
+
+
