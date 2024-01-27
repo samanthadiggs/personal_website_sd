@@ -38,14 +38,17 @@ body {
   font-family:'Bemirs', serif
  }
  
- 
+
  /* STYLE NAV BAR */
 
  #navBar {
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
+  row-gap: 5px;
+  padding-left:3%;
+  padding-right:15%;
  }
 
  #navHeader {
@@ -91,18 +94,6 @@ body {
  }
 
 
- .socialLink {
-  width: 30%;
-  padding:2%;
- }
-
- .socialLink:hover {
-  width:35%;
-  transition-timing-function: 3s ease-in-out;
-
- }
-
-
  #buttonContainer {
   display:flex;
   justify-content: start;
@@ -142,6 +133,40 @@ body {
 
 
  /* page transitions */
+
+.overlay {
+  position:fixed;
+  width: 100vw;
+  height: 100vh;
+  padding:0;
+  margin:0;
+  z-index:2;
+  display:flex;
+}
+
+
+.load_bar {
+  width:10vw;
+  height: 105vh;
+  background: whitesmoke;
+}
+
+.counter {
+  position:fixed;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  z-index:10000;
+  padding:0.2em 0.4em;
+  color: black;
+  font-size: 20vw;
+}
+
+
+
+
 
  .reveal {
   position:relative;
@@ -293,3 +318,6 @@ fill: white;
 fill:white;
 }
 
+#dropdownMenuLink {
+  font-family: 'Bemirs', serif;
+}
