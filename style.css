@@ -79,26 +79,13 @@ body {
 }
 
 /*styling main page */
-/*
- #hero {
-  display: flex;
-  padding:5%;
-  justify-content: space-between;
-  gap:35px
- }
-*/
- .introLeft{
+
+
+ .intro{
 
   margin-top:10%;
 
  }
-
-
- #buttonContainer {
-  display:flex;
-  justify-content: start;
- }
-
 
  .pageHeading {
   font-size: 7rem;
@@ -140,8 +127,9 @@ body {
   height: 100vh;
   padding:0;
   margin:0;
-  z-index:2;
+  z-index:1;
   display:flex;
+  pointer-events: none ;
 }
 
 
@@ -158,10 +146,11 @@ body {
   display:flex;
   justify-content: flex-end;
   align-items:flex-end;
-  z-index:10000;
+  z-index:1000;
   padding:0.2em 0.4em;
   color: black;
   font-size: 20vw;
+  pointer-events: none;
 }
 
 
@@ -274,11 +263,23 @@ object-fit:cover;
 .project-p {
   color:white;
   font-family:'Comfortaa', sans-serif;
+  width: 30vw;
 }
 
+#project-pg-title {
+  font-size:15rem;
+}
 
+.c1 {
+  gap:4rem;
+}
+nav .project-h1:hover {
+  color:white;
+}
 
-
+nav .project-h1 .dropdown-item {
+  color:black;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 #projects-all::-webkit-scrollbar {

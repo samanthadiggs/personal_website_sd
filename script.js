@@ -109,7 +109,8 @@ function onMouseHoverOut() {
   })
 }
 
-document.getElementById('projects-all').addEventListener('wheel', function(event) {
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('projects-all').addEventListener('wheel', function(event) {
     if (event.deltaY != 0) {
         // Prevent the default vertical scrolling
         event.preventDefault();
@@ -117,7 +118,9 @@ document.getElementById('projects-all').addEventListener('wheel', function(event
         // Scroll horizontally instead
         this.scrollLeft += event.deltaY;
     }
-});
+  });
+})
+
 
 
 

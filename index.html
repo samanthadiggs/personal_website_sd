@@ -19,20 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap" rel="stylesheet">
+                
 	  <!-- link the webpage's JavaScript file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="tile_load.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--GSAP js library-->
   </head>
   
   <body class="no-cursor">
-    <!--
-    <div id="page_load_view" function="pagetitle()">
-      <div id="name">Samantha Diggs</div>
-      <div id="title">future data scientists & software engineer</div>
-    </div>
-    -->
-
-
     <h1 class="counter">0</h1>
     <div class="overlay">
       <div class="load_bar"></div>
@@ -46,93 +39,6 @@
       <div class="load_bar"></div>
       <div class="load_bar"></div>
     </div>
-
-    <script>
-      function startLoader() {
-        let counterElement = document.querySelector('.counter');
-        let currentValue = 0;
-
-        document.getElementsByClassName('overlay').styleZindex = 2;
-
-        document.getElementsByClassName('counter').styleZindec = 10000;
-
-        function updateCounter() {
-          if(currentValue === 100){
-            return;
-          }
-
-          currentValue += Math.floor(Math.random() * 10) + 1;
-
-          if(currentValue > 100) {
-            currentValue = 100;
-          }
-          counterElement.textContent = currentValue;
-
-          let delay = Math.floor(Math.random() * 200) + 50;
-          setTimeout(updateCounter, delay)
-        }
-
-        updateCounter();
-
-      }
-
-      startLoader();
-
-      /*
-      gsap.to('.counter', 0.25, {
-        delay:3.5,
-        opacity: 0,
-        })
-
-      gsap.to('.load_bar', 1.5, {
-        delay: 3.5,
-        height: 0,
-        stagger: {amount:0.5},
-        ease: "power4.inOut",
-        })
-      
-        
-      const ov = document.querySelector('.overlay')
-      const bar = document.querySelector('.load_bar')
-      const count = document.querySelector('.counter')
-
-      ov.style.position = "relative";
-      ov.styleZindex = -1;
-      bar.style.position = "relative";
-      bar.styleZindex = -1;
-      count.style.position = "relative";
-      count.styleZindex = -1;
-
-      */
-
-      gsap.to('.counter', {
-  duration: 0.25,
-  delay: 3.5,
-  opacity: 0,
-  onComplete: function() {
-    gsap.to('.load_bar', {
-      duration: 1.5,
-      delay: 0.5,
-      height: 0,
-      stagger: { amount: 0.5 },
-      ease: "power4.inOut",
-      onComplete: function() {
-        gsap.to('.overlay', {
-          duration: 1,
-          autoAlpha: 0,
-          onComplete: function() {
-            gsap.set('.overlay', { zIndex: -1 });
-            gsap.set('.navbar', { zIndex: 2 });
-          }
-        });
-      }
-    });
-  }
-});
-
-
-
-</script>
 
     <nav id="navBar">
       <h1 class="navLink" id="navHeader">Samantha Diggs</h1>
@@ -150,8 +56,9 @@
       </div>
     </div>
     </nav>
+
     <div id="hero">
-      <div class="introLeft">
+      <div class="intro">
         <h1 class="pageHeading">Samantha Diggs</h1>
         <p>Innovative thinker, <b> forever</b> learner, aspiring software engineer</p>
         <div id="introRight" class="d-flex">
@@ -159,7 +66,7 @@
                 <img class="" src="assets/headshot_soph_light.png" alt="samantha diggs headshot with an arch mask, wearing shop uniform">
             </div>
             <div class="flex-grow-1 ms-3">
-                <p>Hello! My name is Samantha Diggs and I am a member of the <b>Class of 2025</b> in the Information Technology Services program at Essex North Shore Agricultural and Technical School. In the future, I will be attending Harvard University where I plan on majoring in Computer Science with a minor in Statistics.
+                <p>Hello! My name is Samantha Diggs and I am a member of the <b>Class of 2025</b> in the Information Technology Services program at Essex North Shore Agricultural and Technical School. In the future, I will be attending __________ where I plan on majoring in Computer Science with a minor in Statistics.
                 During my time at Essex North Shore, I have taken advantage of numerous opportunities and harnessed my passion for technology. I am passionate about all things engineering, data, and design! Through our cooperative education program, I became employed at a Managed Services Provider where I provide technical support to a large number of clients and aid in managing our data center infrastructure. 
                 Whenever I am not coding, I am learning a new language, crocheting, or watching kdramas!
                 </p>
@@ -171,13 +78,6 @@
             </div>
         </div>
         <h1 class="pageHeading" id="big_text">Future Engineer</h1>
-
-        <!-- 
-          <div id="buttonContainer">
-            <a href="https://www.linkedin.com"><img class="hoverable socialLink" src="assets/linkedin.png" alt="Linkedin icon in black and white"> </a>
-            <a href="https://github.com"><img class="hoverable socialLink"src="assets/github.png" alt="Github icon in black and white"> </a>
-          </div>
-          -->
       </div>
 
     </div>
@@ -199,14 +99,105 @@
         </svg>
       </div>
   </div>
+
+  <script>
+    function startLoader() {
+      let counterElement = document.querySelector('.counter');
+      let currentValue = 0;
+
+      document.getElementsByClassName('overlay').styleZindex = 2;
+
+      document.getElementsByClassName('counter').styleZindec = 10000;
+
+      function updateCounter() {
+        if(currentValue === 100){
+          return;
+        }
+
+        currentValue += Math.floor(Math.random() * 10) + 1;
+
+        if(currentValue > 100) {
+          currentValue = 100;
+        }
+        counterElement.textContent = currentValue;
+
+        let delay = Math.floor(Math.random() * 200) + 50;
+        setTimeout(updateCounter, delay)
+      }
+
+      updateCounter();
+
+    }
+
+    startLoader();
+
+    /*
+    gsap.to('.counter', 0.25, {
+      delay:3.5,
+      opacity: 0,
+      })
+
+    gsap.to('.load_bar', 1.5, {
+      delay: 3.5,
+      height: 0,
+      stagger: {amount:0.5},
+      ease: "power4.inOut",
+      })
+    
+      
+    const ov = document.querySelector('.overlay')
+    const bar = document.querySelector('.load_bar')
+    const count = document.querySelector('.counter')
+
+    ov.style.position = "relative";
+    ov.styleZindex = -1;
+    bar.style.position = "relative";
+    bar.styleZindex = -1;
+    count.style.position = "relative";
+    count.styleZindex = -1;
+
+    */
+
+    gsap.to('.counter', {
+      duration: 0.25,
+      delay: 3.5,
+      opacity: 0,
+      onComplete: function() {
+        gsap.to('.load_bar', {
+          duration: 1.5,
+          delay: 0.5,
+          height: 0,
+          stagger: { amount: 0.5 },
+          ease: "power4.inOut",
+          onComplete: function() {
+            gsap.to('.overlay', {
+              duration: 1,
+              autoAlpha: 0,
+              onComplete: function() {
+                gsap.set('.overlay', { zIndex: -1 });
+                gsap.set('#navbar', { zIndex: 2 });
+                document.querySelector('.overlay').remove()
+                document.querySelectorAll('.load_bar').forEach(function(el) {
+                  el.remove();
+                console.log('removall is success')
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+
+
+
+</script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!--GSAP js library-->
-    <script src="js/TweenMax.min.js"></script> <!-- Tween js-->
-    <script src="js/TimelineMax.min.js"></script>
-    <script src="script.js" defer></script> <!-- my JS file-->
+<!-- 
+    <script src="js/TweenMax.min.js"></script>  Tween j
+    <script src="js/TimelineMax.min.js"></script> -->
+    <script src="script.js"></script> <!-- my JS file-->
 
 </body>
 </html>
