@@ -1,6 +1,4 @@
 
-
-
 @font-face {
   font-family:'Bemirs';
   src:url(assets/bemirs-font/BemirsDemoVersionRegular-L360Z.ttf)
@@ -18,7 +16,7 @@
 
 body {
   background-color: whitesmoke;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
   padding:2%;
  }
  
@@ -83,7 +81,7 @@ body {
 
  .intro{
 
-  margin-top:10%;
+  margin-top:4%;
 
  }
 
@@ -104,10 +102,10 @@ body {
  }
 
  #myImage {
-  width:50%;
+  width:40%;
   justify-self: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
  }
 
  .introRightText {
@@ -118,7 +116,19 @@ body {
   font-size: 1.4rem;
  }
 
+.intro p{
+  font-size: 1.5rem;
+}
+.menuLink {
+  font-size: 1.5rem;
+  border-bottom: 2px solid black;
+}
 
+.menuLink a {
+  text-decoration: none;
+  color:black;
+
+}
  /* page transitions */
 
 .overlay {
@@ -321,4 +331,12 @@ fill:white;
 
 #dropdownMenuLink {
   font-family: 'Bemirs', serif;
+}
+
+
+
+/* certificate page */
+.certificates{
+  border-radius: 13px;
+  width:15%;
 }
