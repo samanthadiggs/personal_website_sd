@@ -19,25 +19,31 @@
 
     <!-- link the webpage's JavaScript file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+      html, body, .menuLink a, h1, h2, h3 {color:white;}
+      body {background-color:black;}
+    </style>
   </head>
 
-  <body class="no-cursor">
+  <body  class="no-cursor">
     <!--
     <div id="page_load_view" function="pagetitle()">
       <div id="name">Samantha Diggs</div>
       <div id="title">future data scientists & software engineer</div>
     </div>
     -->
-    <nav id="navBar">
-      <div class="dropdown show">
-        <a class="hoverable navLink dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-"> menu</a>    
-        <div class="hoverable dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a href="index.html" class='hoverable dropdown-item navLink'>home</a>
-          <a href="about.html" class="hoverable dropdown-item navLink">about</a>
+    <nav id="navBar" class="nav justify-content-end">      
+      <div class="nav-item dropdown show">
+        <a class="hoverable navLink dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-"> menu</a>
+        <div class="hoverable dropdown-menu dropdown-menu-sm-start" aria-labelledby="dropdownMenuLink">
+          <a href="index.html" class="hoverable dropdown-item navLink">home</a>
+          <a href="education.html" class='hoverable dropdown-item navLink'>education</a>
           <a href="portfolio.html" class="hoverable dropdown-item navLink">projects</a>
-        </div>
       </div>
+    </div>
     </nav>
+
   <div class="cursor">
     <div class="cursor__ball cursor__ball--big ">
       <svg height="30" width="30">
@@ -53,16 +59,52 @@
 
   <main>
     <h1>Education</h1>
-    <p>menu</p>
-    <a class="hoverable" href="#technicalReflections">technical reflections</a>
-    <a>certificates</a>
-    <a>academic papers</a>
-    <a>graduate profile</a>
-    <a>service and recognition</a>
+    <div class="d-flex">
+      <div class="flex-grow-1 p-2 ms-3">
+        <p>menu</p>
+        <div class="d-flex mb-2 align-items-center justify-content-between menuLink"><a class="p-1 hoverable" href="#technicalReflections">technical reflections</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" focusable="false" class="p-1 bi bi-arrow-right-short" aria-hidden="true" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>
+        </div>
 
+        <div class="d-flex mb-2 align-items-center justify-content-between menuLink"><a class="p-1 hoverable" href="#technicalReflections">certificates</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" focusable="false" class="p-1 bi bi-arrow-right-short" aria-hidden="true" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>     
+        </div>
+        
+        <div class="d-flex mb-2 align-items-center justify-content-between menuLink"><a class="p-1 hoverable" href="#technicalReflections">academic papers</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" focusable="false" class="p-1 bi bi-arrow-right-short" aria-hidden="true" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>
+        
+        </div>
 
-    <img src="assets/it-specialist-networking.png">
+        <div class="d-flex mb-2 align-items-center justify-content-between menuLink"><a class="p-1 hoverable" href="#graduateProfile">graduate profile</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" focusable="false" class="p-1 bi bi-arrow-right-short" aria-hidden="true" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>
+        
+        </div>
 
+        <div class="d-flex mb-2 align-items-center justify-content-between menuLink"> <a class="p-1 hoverable" href="#technicalReflections">service and recognition</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" focusable="false" class="p-1 bi bi-arrow-right-short" aria-hidden="true" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+          </svg>
+        </div>
+
+      </div>
+
+      <div class=""> 
+        <p>As a part of the Information Technology Services program at Essex North Shore Agricultural & Technical School 
+          I have grown my skills in networking while simultaneously practicing my passion for creating applications in various programming languages.
+          I earned MTA certifications in Python programming as well as HTML and CSS, Network Fundamentals, and Windows Operating System Fundamentals.  
+          Recently, at the SkillsUSA districts competition, I earned a Silver Medal in the programming competition and I am moving on to compete at States at the end of April.  
+          From configuring switches and routers to creating programs and websites, I have tirelessly worked to advance my technological proficiency while in the ITS program.</p>
+      </div>
+       
+    </div>
 
     <h1 id="technicalReflections">technical reflections</h1>
 
@@ -71,8 +113,9 @@
       <div>
         <p>Filter By: </p>
       </div>
+      <!--- 
       <div>
-        <div class="horizontal" id="certs1">
+        <div class="horizontal flex-xxl-row d-flex justify-content-xxl-evenly flex-xxl-nowrap" id="certs1">
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
@@ -80,7 +123,7 @@
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
         </div>
-        <div class="horizontal" id="certs2">
+        <div class="horizontal flex-xxl-row d-flex justify-content-xxl-evenly flex-xxl-nowrap" id="certs2">
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
           <div><img class="certificates" src="assets\certifications\itf_cert.png"> </div>
@@ -90,6 +133,38 @@
         </div>
       </div>
     </div>
+    --->
+
+    <h1 id="graduateProfile">Graduate Profile</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Collaborative</h2>
+        </div>
+        <div class="col">
+          <p>i am collaborative because blah blah blah</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Perserverant</h2>
+        </div>
+        <div class="col">
+          <p>i am perserverant because blah blah blah blah</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Culturally Proficient</h2>
+        </div>
+        <div class="col">
+          <p>i am culturally proficient because hahahahahaha</p>
+        </div>
+      </div>
+      
+
+    </div>
+    
 
   </main>
   <!-- bootstrap js requirements + other js requirements-->
