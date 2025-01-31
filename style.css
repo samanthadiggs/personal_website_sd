@@ -358,7 +358,6 @@ fill:white;
 }
 
 
-
 /* certificate page */
 .certificates{
   border-radius: 13px;
@@ -369,7 +368,6 @@ fill:white;
 #certs1, #certs2::-webkit-scrollbar {
   display: none;
 }
-
 
 
 iframe {
