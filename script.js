@@ -61,17 +61,9 @@ reveal3()
 
 document.body.onmousemove = function(e) {
   document.documentElement.style.setProperty (
-    '--x', (
-      e.clientX+window.scrollX
-    )
-    + 'px'
-  );
+    '--x', e.clientX + 'px');
   document.documentElement.style.setProperty (
-    '--y', (
-      e.clientY+window.scrollY
-    ) 
-    + 'px'
-  );
+    '--y', e.clientY + 'px');
 }
 
 const $bigBall = document.querySelector('.cursor__ball--big');
@@ -80,20 +72,20 @@ const $hoverables = document.querySelectorAll('.hoverable');
 
 // Listeners
 document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
+$hoverables.forEach (el => {
+  el.addEventListener('mouseenter', onMouseHover);
+  el.addEventListener('mouseleave', onMouseHoverOut);
+});
 
 // Move the cursor
 function onMouseMove(e) {
   TweenMax.to($bigBall, .4, {
-    x: e.pageX - 15,
-    y: e.pageY - 15
+    x: e.clientX - 15,
+    y: e.clientY - 15
   })
   TweenMax.to($smallBall, .1, {
-    x: e.pageX - 5,
-    y: e.pageY - 7
+    x: e.clientX - 5,
+    y: e.clientY - 7
   })
 }
 
@@ -122,7 +114,40 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
+// education page - certification scroll
+function transitionToPage(nextPageId) {
+  const currentPage = document.querySelector('.current-page');
+  const nextPage = document.getElementById(nextPageId);
 
+  currentPage.classList.add('fade-out');
+  nextPage.style.display = 'block';
+  nextPage.classList.add('slide-in');
+
+  currentPage.addEventListener('animationend', () => {
+    currentPage.classList.remove('current-page', 'fade-out');
+    currentPage.style.display = 'none';
+    nextPage.classList.add('current-page');
+    nextPage.classList.remove('slide-in');
+  }, { once: true });
+}
+
+const leftButton = document.querySelector('.scrollLeft');
+const rightButton = document.querySelector('.scrollRight');
+const certsContainer = document.querySelector('.certificationContainer');
+
+leftButton.addEventListener('click', () => {
+  certsContainer.scrollBy({
+    left: -200, // Adjust scroll amount as needed
+    behavior: 'smooth'
+  });
+});
+
+rightButton.addEventListener('click', () => {
+  certsContainer.scrollBy({
+    left: 200, // Adjust scroll amount as needed
+    behavior: 'smooth'
+  });
+});
 
 
 /* page load */

@@ -252,20 +252,44 @@ body {
 
 }
 
-@keyframes scrolling {
 
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.slide-in {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes fadeOut {
   0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background: black;
+  }
+}
 
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrolling {
+  0% {
     transform: translateX(100%);
-
   }
 
   100% {
-
     transform: translateX(-100%);
-
   }
-
 }
 
 .left_slide {
@@ -315,6 +339,7 @@ nav .project-h1 .dropdown-item {
   color:black;
 }
 
+/* cursor CSS */
 /* Hide scrollbar for Chrome, Safari and Opera */
 #projects-all::-webkit-scrollbar {
   display: none;
@@ -358,18 +383,105 @@ fill:white;
 }
 
 
-/* certificate page */
-.certificates{
+/* education page */
+
+.technicalReflectionsSection{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  margin-top: 2%;
+}
+.technicalReflectionsContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+}
+.reflectionImg{
+  width:70%;
+  margin-left: 25%;
+  margin-right: 25%;
   border-radius: 13px;
-  width:15%;
+  display:block;
 }
 
+.reflectionContainer:hover .reflectionImg {
+  opacity: 0.3;
+  /*transform: scale(1.05);*/
+}
+.reflectionContainer{
+  display: inline-block;
+  position:relative;
+  transition: opacity 0.5s ease-in-out;
 
-#certs1, #certs2::-webkit-scrollbar {
+  
+}
+
+.reflectionTitle{
+  position:absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size:24px;
+  opacity:0;
+  color:white;
+  text-decoration: none;
+  transition: opacity 0.5s ease-in;
+  text-align:center;
+  
+}
+
+.reflectionContainer:hover .reflectionTitle{
+  opacity:1;
+}
+
+.reflectionTitle:hover{
+  color:white;
+}
+
+.certifcationContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  overflow-x: auto;
+}
+.certificates{
+  border-radius: 13px;
+  margin-left:10px;
+  width:15em;
+  transition: transform 0.3s ease-in-out;
+  /*padding:1em; */
+}
+
+.certificates:hover {
+  transform: scale(1.05);
+}
+
+#certs1::-webkit-scrollbar {
   display: none;
 }
 
+.scroll-button {
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
 
+.scroll-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.gradProfileImg{
+  width: 20em;
+  border-radius: 13px;
+  transition: opacity 0.5s ease;
+}
 iframe {
   border:none;
   height: 50em;
