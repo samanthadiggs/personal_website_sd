@@ -26,6 +26,7 @@
   </head>
 
   <body class="horizontal no-cursor">
+
     <nav id="navBar" class="nav justify-content-end">      
       <div class="nav-item dropdown show">
         <a class="hoverable navLink dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-"> menu</a>
@@ -40,40 +41,41 @@
     <main class="horizontal">
         <div id="projects-all" class="horizontal flex-xxl-row d-flex justify-content-xxl-evenly flex-xxl-nowrap">
             <div class="c0">
-                <h1 id="project-pg-title" class="project-h1">Projects</h1>
+                <h1 id="project-pg-title" >Projects</h1>
                 <p>Throughout my time in the Information Technology Services program, I have developed a strong interest in Data Science and Bioinformatics. This has lead me to pursue my Computer Science degree with a concentration in Data Science. </p>
             </div>
-            <div class="c2">
-              <div class="c1 d-flex">
-                      <div class="flex-shrink-0"> 
+            <div class="c2 d-flex">
+              <div class="c1">
+                      <div class="projectImageContainer"> 
                           <img class="project-img mw-50" src="assets/jon-tyson-r27umXAelDc-unsplash.jpg">
                       </div>
-                      <div class="flex-grow-1 ms-3">
-                          <h1 class="project-h1">the pokeball project</h1>
-                          <p class="project-p">The “Pokéball” is a fictional item to capture Pokémon from the famous franchise “Pokémon”. There are several aspects to the ball itself, with flashing lights to indicate a captured or escaped Pokémon and having the Pokéball reopen when the Pokémon escapes. We set out to create a toy Pokéball with these functions, ultimately implementing a game and entertainment along with it. Our Pokéball could be marketed as a real-life Pokéball to capture these fun creatures for Pokémon enjoyers. </p>
-                      </div>
-                  </div>
-              <div class="c1 d-flex">
-                  <div class="flex-shrink-0"> 
+                      <div class="projectTextContainer">
+                        <h1 class="projectTitle">the pokeball project</h1>
+                        <p class="projectText">The “Pokéball” is a fictional item to capture Pokémon from the famous franchise “Pokémon”. There are several aspects to the ball itself, with flashing lights to indicate a captured or escaped Pokémon and having the Pokéball reopen when the Pokémon escapes. We set out to create a toy Pokéball with these functions, ultimately implementing a game and entertainment along with it. Our Pokéball could be marketed as a real-life Pokéball to capture these fun creatures for Pokémon enjoyers. </p>
+                    
+                        </div>
+              </div>
+              <div class="c1">
+                  <div class="projectImageContainer"> 
                       <img class="project-img mw-50" src="assets/mario-azzi-CL6560K5vOo-unsplash.jpg">
                   </div>
-                  <div class="flex-grow-1 ms-3">
-                      <h1 class="project-h1">the martian project</h1>
-                      <p class="project-p">The martian project is basde on is a fictional item to capture Pokémon from the famous franchise “Pokémon”. There are several aspects to the ball itself, with flashing lights to indicate a captured or escaped Pokémon and having the Pokéball reopen when the Pokémon escapes. We set out to create a toy Pokéball with these functions, ultimately implementing a game and entertainment along with it. Our Pokéball could be marketed as a real-life Pokéball to capture these fun creatures for Pokémon enjoyers. </p>
+                  <div class="projectTextContainer">
+                      <h1 class="projectTitle">the martian project</h1>
+                      <p class="projectText">The martian project is base on is a fictional item to capture Pokémon from the famous franchise “Pokémon”. There are several aspects to the ball itself, with flashing lights to indicate a captured or escaped Pokémon and having the Pokéball reopen when the Pokémon escapes. We set out to create a toy Pokéball with these functions, ultimately implementing a game and entertainment along with it. Our Pokéball could be marketed as a real-life Pokéball to capture these fun creatures for Pokémon enjoyers. </p>
                   </div>
               </div>
-              <div class=" c1 d-flex">
-                  <div class="flex-shrink-0"> 
+              <div class="c1">
+                  <div class="projectImageContainer"> 
                       <img class="project-img mw-50" src="assets/joshua-koblin-UOBJtYh1C6I-unsplash.jpg">
                   </div>
-                  <div class="flex-grow-1 ms-3">
-                      <h1 class="project-h1">MIT BWSI Girls Who Program Autonomous Cars</h1>
-                      <p class="project-p"> By far one of the hardest, but most rewarding Python experience of my life!</p>
+                  <div class="projectTextContainer">
+                      <h1 class="projectTitle">MIT BWSI Girls Who Program Autonomous Cars</h1>
+                      <p class="projectText"> By far one of the hardest, but most rewarding Python experience of my life!</p>
                   </div>
               </div>
             </div>
         </div> 
-        <h1 class="fixed-bottom scrolling-text project-h1">Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create 
+        <h1 class="fixed-bottom scrolling-text" >Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create 
             Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create 
             Create Create Create Create Create Create Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop 
             Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop 
@@ -110,8 +112,9 @@
 
     <!-- loading page animation-->
     <script> 
+    
       //wrap every letter in a span
-      var textWrapper = document.querySelector('.project-h1');
+      var textWrapper = document.querySelector('#project-pg-title');
       textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
       anime.timeline().add({
@@ -145,32 +148,34 @@
         opacity:0,
       });
 
+      /*
+
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray(".c1").forEach((project) => {
         gsap.from(project, {
           y: 100, // Start lower for a more noticeable effect
-          opacity: 0, // Start fully transparent
+          opacity: 1, // Start fully transparent
           duration: 1.2, // Animation duration
           ease: "power2.out", // Smooth easing
           scrollTrigger: {
             trigger: project, // Trigger when this specific project comes into view
-            start: "left 100%", // When the top of `.c1` reaches 75% of the viewport
+            start: "left cemter", // When the top of `.c1` reaches 75% of the viewport
             toggleActions: "play none none none", // Play only once
             pin:false,
-          }
+          },
+          delay: 0.5, // Delay the animation start,
         });
     });
-      
+      */
 
-
-/* 
+ 
       TweenMax.staggerFrom(".c1", 1, {
-        y:"60",
+        y:"80",
         opacity:0,
         ease:Power2.ease,
         delay:4,
-      }, 0.2); */
+      }, 1); 
 
   </script>
-</body>
+  </body>
 </html>
