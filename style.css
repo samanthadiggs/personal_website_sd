@@ -151,9 +151,13 @@ body {
   color:white;
 }
 
+#aboutStats{
+  padding:3%;
+}
 .container2 p {
   font-size: 1.25rem;
 }
+
 
  /* page transitions */
 
@@ -284,13 +288,14 @@ body {
 
 @keyframes scrolling {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 
   100% {
     transform: translateX(-100%);
   }
 }
+
 
 .left_slide {
   animation: slide-in-left 5s ease-in;
@@ -330,6 +335,7 @@ object-fit:cover;
 
 .c1 {
   gap:4rem;
+  position:relative;
 }
 nav .project-h1:hover {
   color:white;
@@ -440,8 +446,7 @@ fill:white;
 .reflectionTitle:hover{
   color:white;
 }
-
-.certifcationContainer{
+.scrollContainer{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -449,9 +454,23 @@ fill:white;
   margin-top: 2%;
   overflow-x: auto;
 }
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+.certifcationContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  overflow-x: auto;
+  padding-left:2%;
+  padding-right:2%;
+}
 .certificates{
   border-radius: 13px;
-  margin-left:10px;
+  margin-left:15px;
   width:15em;
   transition: transform 0.3s ease-in-out;
   /*padding:1em; */
@@ -465,16 +484,21 @@ fill:white;
   display: none;
 }
 
-.scroll-button {
-  background-color: #ccc;
+.scrollButton {
+  background-color: black;
+  color:black;
   border: none;
   padding: 10px;
   cursor: pointer;
 }
 
-.scroll-button:disabled {
+.scrollButton:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.scrollButton:hover{
+  transform: scale(1.05);
 }
 
 .gradProfileImg{
