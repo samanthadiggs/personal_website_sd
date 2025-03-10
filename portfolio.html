@@ -169,7 +169,7 @@
       // hover animation
       document.querySelectorAll(".c1").forEach((c1) => {
         c1.addEventListener("mouseenter", () => {
-          gsap.to(c1.querySelectorAll(".projectTitle, .projectText"), {
+          gsap.to(c1.querySelectorAll(".projectTitle, .projectText, .c1 a"), {
             opacity: 1,
             duration: 0.5,
           });
@@ -180,7 +180,7 @@
         });
 
         c1.addEventListener("mouseleave", () => {
-          gsap.to(c1.querySelectorAll(".projectTitle, .projectText"), {
+          gsap.to(c1.querySelectorAll(".projectTitle, .projectText, .c1 a"), {
             opacity: 0,
             duration: 0.5,
           });
