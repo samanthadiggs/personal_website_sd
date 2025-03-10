@@ -29,7 +29,7 @@
 
     <nav id="navBar" class="nav justify-content-end">      
       <div class="nav-item dropdown show">
-        <a class="hoverable navLink dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-"> menu</a>
+        <a class="hoverable navLink dropdown-toggle" id="dropdownMenuLink" role="button" data-toggle="dropdown"> menu</a>
         <div class="hoverable dropdown-menu dropdown-menu-sm-start" aria-labelledby="dropdownMenuLink">
           <a href="index.html" class="hoverable dropdown-item navLink">home</a>
           <a href="about.html" class='hoverable dropdown-item navLink'>about</a>
@@ -51,7 +51,8 @@
                       </div>
                       <div class="projectTextContainer">
                         <h1 class="projectTitle">the pokeball project</h1>
-                        <p class="projectText">The “Pokéball” is a fictional item to capture Pokémon from the famous franchise “Pokémon”. There are several aspects to the ball itself, with flashing lights to indicate a captured or escaped Pokémon and having the Pokéball reopen when the Pokémon escapes. We set out to create a toy Pokéball with these functions, ultimately implementing a game and entertainment along with it. Our Pokéball could be marketed as a real-life Pokéball to capture these fun creatures for Pokémon enjoyers. </p>
+                        <p class="projectText">A collaborative project. </p>
+                        <a class="hoverable" href="https://github.com/viennalau/pokeball">Github</a>
                     
                         </div>
               </div>
@@ -73,6 +74,15 @@
                       <p class="projectText"> By far one of the hardest, but most rewarding Python experience of my life!</p>
                   </div>
               </div>
+              <div class="c1">
+                <div class="projectImageContainer"> 
+                    <img class="project-img mw-50" src="assets/joshua-koblin-UOBJtYh1C6I-unsplash.jpg">
+                </div>
+                <div class="projectTextContainer">
+                    <h1 class="projectTitle">MIT BWSI Girls Who Program Autonomous Cars</h1>
+                    <p class="projectText"> By far one of the hardest, but most rewarding Python experience of my life!</p>
+                </div>
+            </div>
             </div>
         </div> 
         <h1 class="fixed-bottom scrolling-text" >Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create 
@@ -130,7 +140,7 @@
       TweenMax.from(".c0", 4, {
         left:"50%",
         ease:Expo.easeInOut,
-        delay:3.4,
+        delay:2.5,
       });
 
       TweenMax.from("#project-pg-title", 3, {
@@ -147,34 +157,40 @@
         delay:1.5,
         opacity:0,
       });
+      
 
-      /*
-
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray(".c1").forEach((project) => {
-        gsap.from(project, {
-          y: 100, // Start lower for a more noticeable effect
-          opacity: 1, // Start fully transparent
-          duration: 1.2, // Animation duration
-          ease: "power2.out", // Smooth easing
-          scrollTrigger: {
-            trigger: project, // Trigger when this specific project comes into view
-            start: "left cemter", // When the top of `.c1` reaches 75% of the viewport
-            toggleActions: "play none none none", // Play only once
-            pin:false,
-          },
-          delay: 0.5, // Delay the animation start,
-        });
-    });
-      */
-
- 
       TweenMax.staggerFrom(".c1", 1, {
-        y:"80",
+        y:"150",
         opacity:0,
         ease:Power2.ease,
-        delay:4,
-      }, 1); 
+        delay:6,
+      }, 0.5); 
+
+      // hover animation
+      document.querySelectorAll(".c1").forEach((c1) => {
+        c1.addEventListener("mouseenter", () => {
+          gsap.to(c1.querySelectorAll(".projectTitle, .projectText"), {
+            opacity: 1,
+            duration: 0.5,
+          });
+          gsap.to(c1.querySelector(".projectImageContainer"), {
+            opacity:0.3,
+            duration: 0.5,
+          });
+        });
+
+        c1.addEventListener("mouseleave", () => {
+          gsap.to(c1.querySelectorAll(".projectTitle, .projectText"), {
+            opacity: 0,
+            duration: 0.5,
+          });
+          gsap.to(c1.querySelector(".projectImageContainer"), {
+            opacity:1,
+            duration: 0.5,
+          });
+        });
+      });
+
 
   </script>
   </body>

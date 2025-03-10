@@ -366,6 +366,11 @@ fill:white;
 .c2{
   gap:4rem;
 }
+
+.c0 p {
+  font-size: 1.5rem;
+}
+
 .project-img {
   max-width:100%;
   object-fit:cover;
@@ -373,13 +378,13 @@ fill:white;
 
 .projectTitle{
   color:white;
-  transition: opacity 0.5s ease-in-out;
+  /* transition: opacity 0.5s ease-in-out; */
   opacity:0;
 }
 
 .projectText{
   color:white;
-  transition: opacity 0.5s ease-in-out;
+ /* transition: opacity 0.5s ease-in-out; */
   opacity:0;
 }
 
@@ -388,7 +393,7 @@ fill:white;
   position: relative;
   gap: 4rem;
   align-items: center;
-  transition: opacity 0.5s ease-in-out;
+  /* transition: opacity 0.5s ease-in-out; */
   grid-template-columns: auto;
   grid-template-rows: auto;
 
@@ -423,31 +428,6 @@ fill:white;
   color:white;
 }
 
-
-nav .project-h1:hover {
-  color:white;
-}
-
-nav .project-h1 .dropdown-item {
-  color:black;
-}
-
-.c1:hover .projectTitle {
-  opacity:1;
-
-}
-
-.c1:hover .projectText {
-  opacity:1;
-}
-
-.c1:hover .project-img {
-  opacity: 0.3;
-  /*transform: scale(1.05);*/
-}
-
-
-
 /* education page */
 
 .technicalReflectionsSection{
@@ -457,6 +437,7 @@ nav .project-h1 .dropdown-item {
   align-items: left;
   margin-top: 2%;
 }
+
 .technicalReflectionsContainer{
   display:flex;
   flex-direction: row;
@@ -464,6 +445,7 @@ nav .project-h1 .dropdown-item {
   align-items: center;
   margin-top: 2%;
 }
+
 .reflectionImg{
   width:70%;
   margin-left: 25%;
@@ -568,4 +550,8 @@ iframe {
   border:none;
   height: 50em;
   width: 50%;
+}
+
+.serviceRecognitionSection{
+  margin-top:2%;
 }
