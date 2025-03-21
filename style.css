@@ -343,12 +343,20 @@ fill:white;
 
 /* project page styling */
 
+.projectsPage{
+  background-color: black;
+  padding: 2%;
+}
+
 #projects-all::-webkit-scrollbar {
   display: none;
 }
 
 #projects-all {
-  column-gap:30rem;
+  column-gap:5rem;
+  flex-direction: column;
+  overflow-x:hidden;
+  overflow-y:scroll;
 }
 
 .c2::-webkit-scrollbar {
@@ -359,17 +367,22 @@ fill:white;
   gap:4rem;
 }
 
-.c0 p {
-  font-size: 1.5rem;
+.projectTitles{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.project-img {
-  max-width:100%;
+.projectTitleWrapper{
+  text-align: center;
+}
+.project-img{
+  width:70%;
+  border-radius: 13px;
+  display:block;
   object-fit:cover;
 }
 
 .projectTitle{
-  font-size:4rem;
+  font-size:3em;
   color:white;
   /* transition: opacity 0.5s ease-in-out; */
   opacity:0;
@@ -381,43 +394,25 @@ fill:white;
   opacity:0;
 }
 
-.c1{
-  display: grid;
-  position: relative;
-  gap: 4rem;
-  align-items: center;
-  /* transition: opacity 0.5s ease-in-out; */
-  grid-template-columns: auto;
-  grid-template-rows: auto;
 
+.c1{
+  display:inline-block;
+  position:relative;
 }
 
 .projectTextContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  z-index: 10; /* Ensure text appears above other content */
-  color: white;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  grid-area: 1 / 1; /* Place in the same cell as the image container */
+  position:absolute;
+  top: 20%;
+  left: 60%;
+  font-size:24px;
+  opacity:0;
+  color:white;
+  text-decoration: none;
+  text-align:center;
 }
 
-.projectImageContainer{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    grid-area: 1 / 1; /* Place in the first cell of the grid */
-  }
-
-
 #project-pg-title {
-  font-size:15rem;
+  font-size:10rem;
   color:white;
 }
 

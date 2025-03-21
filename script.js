@@ -153,3 +153,11 @@ rightButton.addEventListener('click', () => {
 /* page load */
 
 
+
+// project page scripting
+
+const titles = document.querySelectorAll('.projectTitleWrapper');
+
+const updateTitlePosition = () => {
+  const titleY
+}
