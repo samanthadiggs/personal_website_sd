@@ -39,63 +39,60 @@
     </nav>
 
     <main class="projectsPage">
-        <div id="projects-all" class="flex-xxl-column d-flex justify-content-xxl-evenly flex-xxl-nowrap">
-            <div class="c0">
+        <div id="projects-all">
+            <div class="projectPageHeader">
                 <h1 id="project-pg-title" >Projects</h1>
+                
             </div>
-            <div class="projectTitles">
-              <div class="projectTitleWrapper">
-                <h1>The Pokeball</h1>
-                <h1>The Martian Project</h1>
-                <h1>Project LIFT</h1>
-                <h1>Home Away From Home</h1>
-                <h1>Cine</h1>
-                <h1>Sims 4 Name Generator</h1>
-                <h1>Hey Voyage</h1>
 
+            <div class="projectsContainer flex-xxl-column d-flex flex-xxl-nowrap">
+              <div id="project1" class="indivProjectContainer mx-3 px-3">
+                <div class="projectTextContainer">
+                  <h1 class="projectTitle">The Pokeball </h1>
+                  <p class="projectText">hello this is my project</p>
+                  <a class="hoverable" href="" target="_blank">link to project</a>
+                </div>
               </div>
-            </div>"
 
-            <!-- 
-            <div class="c2 d-flex justify-content-evenly flex-row">
-              <div class="c1">
-                <img class="project-img" src="assets/jon-tyson-r27umXAelDc-unsplash.jpg">
+              <div class="indivProjectContainer mx-3 px-3">
                 <div class="projectTextContainer">
-                  <h1 class="projectTitle">the pokeball project</h1>
-                  <p class="projectText">A collaborative project. </p>
-                  <a class="hoverable" href="https://github.com/viennalau/pokeball">Github</a>                
+                  <h1 class="projectTitle">The Martian Project</h1>
+                  <p class="projectText"></p>
+                  <a class="hoverable" href="" target="_blank"></a>
                 </div>
               </div>
-              <div class="c1">
-                  <div class="projectImageContainer"> 
-                      <img class="project-img mw-50" src="assets/mario-azzi-CL6560K5vOo-unsplash.jpg">
-                  </div>
-                  <div class="projectTextContainer">
-                      <h1 class="projectTitle">the martian project</h1>
-                      <p class="projectText">The martian project is a collaborative project </p>
-                  </div>
-              </div>
-              <div class="c1">
-                  <div class="projectImageContainer"> 
-                      <img class="project-img mw-50" src="assets/joshua-koblin-UOBJtYh1C6I-unsplash.jpg">
-                  </div>
-                  <div class="projectTextContainer">
-                      <h1 class="projectTitle">MIT BWSI Girls Who Program Autonomous Cars</h1>
-                      <p class="projectText"> By far one of the hardest, but most rewarding Python experience of my life!</p>
-                  </div>
-              </div>
-              <div class="c1">
-                <div class="projectImageContainer"> 
-                    <img class="project-img mw-50" src="assets/joshua-koblin-UOBJtYh1C6I-unsplash.jpg">
-                </div>
+
+              <div class="indivProjectContainer mx-3 px-3">
                 <div class="projectTextContainer">
-                    <h1 class="projectTitle">MIT BWSI Girls Who Program Autonomous Cars</h1>
-                    <p class="projectText"> By far one of the hardest, but most rewarding Python experience of my life!</p>
+                  <h1 class="projectTitle">Project LIFT</h1>
+                  <p class="projectText"></p>
+                  <a class="hoverable" href="" target="_blank"></a>
                 </div>
+              </div>
+
+              <div id="project2" class="indivProjectContainer mx-3 px-3">
+                  <div class="projectTextContainer">
+                    <h1 class="projectTitle">Home Away From Home </h1>
+                    <p class="projectText">hello this is my project</p>
+                    <a class="hoverable" href="" target="_blank">link to project</a>
+                  </div>
+                </div>
+
+              <div id="project3" class="indivProjectContainer mx-3 px-3">
+                  <div class="projectTextContainer">
+                    <h1 class="projectTitle">Cine </h1>
+                    <p class="projectText">hello this is my project</p>
+                    <a class="hoverable" href="" target="_blank">link to project</a>
+                  </div>
+              </div>
+              
+              <div id="project3" class="indivProjectContainer mx-3 px-3">
+                  <div class="projectTextContainer">
+                    <h1 class="projectTitle">Sims 4 Name Generator </h1>
+                    <p class="projectText">hello this is my project</p>
+                    <a class="hoverable" href="" target="_blank">link to project</a>
+              </div>
             </div>
-            </div>
-            -->
-        </div> 
         <h1 class="fixed-bottom scrolling-text" >Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create Create  
             Create Create Create Create Create Create Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop 
             Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop Develop 
@@ -117,8 +114,6 @@
         </svg>
       </div>
   </div>
-  <main>
-  </main>
   <!-- bootstrap js requirements + other js requirements-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -132,9 +127,8 @@
 
     <!-- loading page animation-->
     <script> 
-    
-      //wrap every letter in a span
-      var textWrapper = document.querySelector('#project-pg-title');
+    //wrap every letter in a span
+    var textWrapper = document.querySelector('#project-pg-title');
       textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
       anime.timeline().add({
@@ -147,7 +141,7 @@
         delay: (el, i) => 2000 + 60 * i
       });
 
-      TweenMax.from(".c0", 4, {
+      TweenMax.from(".projectPageHeader", 4, {
         left:"50%",
         ease:Expo.easeInOut,
         delay:2.5,
@@ -160,43 +154,12 @@
         delay:1.5,
       });
 
-      /*
-      
-
-      TweenMax.staggerFrom(".c1", 1, {
+      TweenMax.staggerFrom(".indivProjectContainer", 1, {
         y:"150",
         opacity:0,
         ease:Power2.ease,
-        delay:6,
+        delay:5,
       }, 0.5); 
-
-      */
-
-      // hover animation
-      document.querySelectorAll(".c1").forEach((c1) => {
-        c1.addEventListener("mouseenter", () => {
-          gsap.to(c1.querySelectorAll(".projectTitle, .projectText, .c1 a"), {
-            opacity: 1,
-            duration: 0.5,
-          });
-          gsap.to(c1.querySelector(".project-img"), {
-            opacity:0.3,
-            duration: 0.5,
-          });
-        });
-
-        c1.addEventListener("mouseleave", () => {
-          gsap.to(c1.querySelectorAll(".projectTitle, .projectText, .c1 a"), {
-            opacity: 0,
-            duration: 0.5,
-          });
-          gsap.to(c1.querySelector(".project-img"), {
-            opacity:1,
-            duration: 0.5,
-          });
-        });
-      });
-
 
   </script>
   </body>

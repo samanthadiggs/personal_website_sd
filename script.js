@@ -152,3 +152,5 @@ rightButton.addEventListener('click', () => {
 
 /* page load */
 
+// project page scripting
+
