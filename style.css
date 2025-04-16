@@ -379,7 +379,7 @@ fill:white;
 }
 
 .projectTitle{
-  font-size:2em;
+  font-size:1.5em;
   color:white;
   /* transition: opacity 0.5s ease-in-out; */
   opacity:1;
@@ -398,7 +398,7 @@ fill:white;
 
 .indivProjectContainer{
   display:inline-block;
-  width:auto;
+  width: auto;
   position:relative;
   border-color: whitesmoke;
   border-width: 3px;
@@ -423,6 +423,9 @@ fill:white;
 }
 
 /* education page */
+body p{
+  font-size: 1.5rem;
+}
 
 .technicalReflectionsSection{
   display:flex;
