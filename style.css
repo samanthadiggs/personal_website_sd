@@ -529,13 +529,12 @@ body p{
   cursor: pointer;
 }
 
+.scrollButton:focus {
+  border: none;
+}
 .scrollButton:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.scrollButton:hover{
-  transform: scale(1.05);
 }
 
 .gradProfileImg{
