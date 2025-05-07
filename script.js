@@ -154,3 +154,22 @@ rightButton.addEventListener('click', () => {
 
 // project page scripting
 
+function certificationFilter(category) {
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const certifications = document.querySelectorAll('.certificates');
+  var filterValue = category;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+
+      certifications.forEach(cert => {
+        if (filterValue === 'all' || cert.classList.contains(filterValue)) {
+          cert.style.display = 'block';
+        } else {
+          cert.style.display = 'none';
+        }
+      });
+    });
+  });
+}
