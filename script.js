@@ -154,22 +154,30 @@ rightButton.addEventListener('click', () => {
 
 // project page scripting
 
-function certificationFilter(category) {
-  const filterButtons = document.querySelectorAll('.filter-button');
-  const certifications = document.querySelectorAll('.certificates');
-  var filterValue = category;
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('.filter-button');
+  const items = document.querySelectorAll('.certificationContainer > div');
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filterValue = button.getAttribute('data-filter');
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const activeCategories = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.getAttribute('data-category'));
 
-      certifications.forEach(cert => {
-        if (filterValue === 'all' || cert.classList.contains(filterValue)) {
-          cert.style.display = 'block';
-        } else {
-          cert.style.display = 'none';
-        }
-      });
+      if (activeCategories.includes('all') || activeCategories.length === 0) {
+        // Show all items if "All" is checked or no checkboxes are selected
+        items.forEach(item => item.style.display = 'block');
+      } else {
+        // Show items matching the selected categories
+        items.forEach(item => {
+          const itemClasses = Array.from(item.classList);
+          if (activeCategories.some(category => itemClasses.includes(category))) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
     });
   });
-}
+});

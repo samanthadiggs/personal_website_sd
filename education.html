@@ -105,8 +105,8 @@
           <a class="hoverable reflectionTitle" href="https://docs.google.com/document/d/1d3LU5a3h-99reG-IMlerpx1rYvSoYKhrYEGE6cUDQ5U/edit?usp=sharing">Sophomore - Oregon Trail Reflection</a>
         </div>
         <div class="reflectionContainer">
-          <img class="reflectionImg" src="assets\tr_1.png">
-          <a class="hoverable reflectionTitle" href="https://docs.google.com/document/d/1d3LU5a3h-99reG-IMlerpx1rYvSoYKhrYEGE6cUDQ5U/edit?usp=sharing">Oregon Trail Reflection</a>
+          <img class="reflectionImg" src="assets\tr_3.png">
+          <a class="hoverable reflectionTitle" href="https://docs.google.com/document/d/1d3LU5a3h-99reG-IMlerpx1rYvSoYKhrYEGE6cUDQ5U/edit?usp=sharing">Junior - Lab Informatics Research Reflection</a>
         </div>
         <div class="reflectionContainer">
           <img class="reflectionImg" src="assets\tr_4.png">
@@ -121,31 +121,33 @@
       <h1>Service And Recognition</h1>
       <div>
         <p>Filter By: </p>
-        <input type="checkbox" value="default" name="courseCompletion" class="filter-button" id="courseCompletion" /> <label for="courseCompletion">Course Completion </label>
-        <input type="checkbox" value="default" name="certifications" class="filter-button" id="certifications" /> <label for="certifications">Certifications </label>
-        <input type="checkbox" value="default" name="awards" class="filter-button" id="awards" /> <label for="awards">Awards </label>
-        <input type="checkbox" value="default" name="honorRoll" class="filter-button" id="honorRoll" /> <label for="honorRoll">Honor Roll </label>
-        <input type="checkbox" value="default" name="credentials" class="filter-button" id="credentials" /> <label for="credentials">Credentials </label>
+        <input type="checkbox" value="default" name="courseCompletion" class="filter-button" id="courseCompletion" data-category="courseCompletion"/> <label for="courseCompletion">Course Completion </label>
+        <input type="checkbox" value="default" name="certification" class="filter-button" id="certification" data-category="certification"/> <label for="certifications">Certifications </label>
+        <input type="checkbox" value="default" name="awards" class="filter-button" id="awards" data-category="awards"/> <label for="awards">Awards </label>
+        <input type="checkbox" value="default" name="honorRoll" class="filter-button" id="honorRoll" data-category="honorRoll"/> <label for="honorRoll">Honor Roll </label>
+        <input type="checkbox" value="default" name="credentials" class="filter-button" id="credentials" data-category="credentials" /> <label for="credentials">Credentials </label>
       </div>
       <div class="scrollContainer">
         <button class="scrollButton scrollLeft" onClick="scrollLeft()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
         </svg></button>
         <div class="certificationContainer horizontal flex-xxl-row d-flex justify-content-xxl-evenly flex-xxl-nowrap" id="certs1">
-          <div><img class="hoverable certificates" src="assets\certifications\itf_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\mit_bwsi_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\kwk_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\networking_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\python_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\gwc_1_cert.png"> </div>       
-          <div><img class="hoverable certificates" src="assets\certifications\gwc_2_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\gwc_3_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\gwc_4_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\cb_AFAM.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\java_8_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\career_essentials_github_cert.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\github_cert_2.png"> </div>
-          <div><img class="hoverable certificates" src="assets\certifications\github_cert_3.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\itf_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\mit_bwsi_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\kwk_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\networking_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\python_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\gwc_1_cert.png"> </div>       
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\gwc_2_cert.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\gwc_3_cert.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\gwc_4_cert.png"> </div>
+          <div class="awards"><img class="hoverable certificates" src="assets\certifications\cb_AFAM.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\java_8_cert.png"> </div>
+          <div class="certification"><img class="hoverable certificates" src="assets\certifications\career_essentials_github_cert.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\github_cert_2.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\github_cert_3.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\intro_to_data_course.png"> </div>
+          <div class="courseCompletion"><img class="hoverable certificates" src="assets\certifications\network_defense_cert.png"> </div>
         </div>
         <button class="scrollButton scrollRight" onClick="scrollRight()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
@@ -173,7 +175,7 @@
             <p>I am an excellent example of perserverance. While there are countless examples of how I have shown this necessary trait, one that stands out the most to me was my time as a Lab Informatics intern. As a Lab Informatics intern, I worked on a project for the company that was part of a massive multi-year plan. 
               It took a lot of perserverance as I encountered situations I had never dealt with before. 
               There would be instances where I would be stuck on fixing a bug in the code for hours. </p>
-              <img class="gradProfileImg" src="assets\grad_profile_perserverant.jpg">
+              <img class="gradProfileImg" src="assets\grad_profile_perserverant.png">
           </div>
           <div class="col">
             <h2>Perserverant</h2>
