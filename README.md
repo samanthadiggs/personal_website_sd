@@ -2,7 +2,9 @@
 
 This repository contains my personal portfolio website created during my senior year of high school to fulfill a graduation requirement. 
 
-While this site is no longer active or actively maintained, I keep this repository public as a personal milestone: I built it from scratch with **zero formal web development education** and minimal AI assistance, teaching myself HTML, CSS, and JavaScript along the way.
+While this site is no longer active or actively maintained, I keep this repository public as a personal milestone: I built it from scratch with **zero formal web development education** and minimal AI assistance, teaching myself HTML, CSS, and JavaScript along the way. 
+
+Note: There are bugs within the code because I was a beginner, but it servers as a snapshot of where I started!
 
 ---
 
